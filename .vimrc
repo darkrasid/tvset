@@ -68,6 +68,11 @@ set showmatch
 set nowrap       
 set wmnu         
 
+augroup filetype
+        au!
+        au! BufRead,BufNewFile *.es6    set syntax=javascript
+augroup END
+
 
 nnoremap <F9> V:w !bash<CR>
 vnoremap <F10> :w !bash<CR>
